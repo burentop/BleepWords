@@ -11,6 +11,8 @@
 int main()
 {
     string disliked = "frick";
+    string disliked2 = "frack";
+    string disliked3 = "dang";
     vector<string> words;
     for (string temp; cin >> temp;)
         words.push_back(temp);
@@ -20,7 +22,7 @@ int main()
     
     for (int i = 0; i < words.size(); ++i) {
         if (i == 0 || words[i - 1] != words[i]) {
-            if (words[i] == disliked)
+            if (words[i] == disliked || words[i] == disliked2 || words[i] == disliked3)
                 cout << "BLEEP\n";
             else
                 cout << words[i] << "\n";
