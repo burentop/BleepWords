@@ -6,10 +6,20 @@
 //  Copyright © 2016 Brent Perry. All rights reserved.
 //
 
-#include <iostream>
+#include "../../../std_lib_facilities.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main()
+{
+    vector<string> words;
+    for (string temp; cin >> temp;)
+        words.push_back(temp);
+    cout << "Number of words: " << words.size() << "\n";
+    
+    sort(words);
+    
+    for (int i = 0; i < words.size(); ++i) {
+        if (i == 0 || words[i - 1] != words[i]) {
+            cout << words[i] << "\n";
+        }
+    }
 }
